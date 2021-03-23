@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,17 +11,17 @@ namespace SklepInternetowyAK.Models
     {
         public int FilmId { get; set; }
 
-        [Required(ErrorMessage = "Wpisz tytul")]
+        [Required(ErrorMessage = "Wpisz tytuł")]
         [StringLength(50)]
         public string Title { get; set; }
 
         public string Director { get; set; }
 
         public string Desc { get; set; }
-
         [Required(ErrorMessage = "Podaj cene")]
-        public decimal Price { get; set; }
 
+        public decimal Price { get; set; }
+       
         public DateTime AddDate { get; set; }
 
         public int CategoryId { get; set; }
