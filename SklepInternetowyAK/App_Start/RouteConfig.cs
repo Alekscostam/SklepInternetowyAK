@@ -18,6 +18,29 @@ namespace SklepInternetowyAK
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+
+            routes.MapRoute(
+                name: "StaticSite",
+                url: "strony/{name}",
+                defaults: new { controller = "Home", action = "StaticSite", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Regulations",
+                url: "strony/{name}",
+                defaults: new { controller = "Home", action = "Regulations", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "Contact",
+                url: "strony/{name}",
+                defaults: new { controller = "Home", action = "Contact", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "PaymentMethods",
+                url: "strony/{name}",
+                defaults: new { controller = "Home", action = "PaymentMethods", id = UrlParameter.Optional }
+            );
         }
     }
 }

@@ -13,15 +13,6 @@ namespace SklepInternetowyAK.Controllers
         FilmsContext db = new FilmsContext();
         public ActionResult Index()
         {
-            Category category = new Category()
-            {
-                CategoryId = 1,
-                Name = "Horror",
-                Desc = "Filmy od lat 16"
-            };
-            db.Categories.Add(category);
-            db.SaveChanges();
-           
             return View();
         }
 
@@ -32,11 +23,29 @@ namespace SklepInternetowyAK.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult StaticSite(string name)
+        {
+            return View(name);
+        }
+
+        public ActionResult Contact(string name)
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View(name);
         }
+        public ActionResult PaymentMethods(string name)
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View(name);
+        }
+        public ActionResult Regulations(string name)
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View(name);
+        }
+        
     }
 }

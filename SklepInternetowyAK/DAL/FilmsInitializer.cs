@@ -56,7 +56,7 @@ namespace SklepInternetowyAK.DAL
                 context.Categories.Add(category);
             }
             context.SaveChanges();
-
+            
             var filmy = new List<Film>()
             {
                 new Film()
