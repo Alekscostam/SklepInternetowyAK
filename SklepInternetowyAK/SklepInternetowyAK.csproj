@@ -153,6 +153,14 @@
     <Compile Include="Migrations\202104130939344_delete Length.designer.cs">
       <DependentUpon>202104130939344_delete Length.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104131144498_PosterName.cs" />
+    <Compile Include="Migrations\202104131144498_PosterName.designer.cs">
+      <DependentUpon>202104131144498_PosterName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104131202595_add_addDate.cs" />
+    <Compile Include="Migrations\202104131202595_add_addDate.designer.cs">
+      <DependentUpon>202104131202595_add_addDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Film.cs" />
@@ -234,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104130939344_delete Length.resx">
       <DependentUpon>202104130939344_delete Length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104131144498_PosterName.resx">
+      <DependentUpon>202104131144498_PosterName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104131202595_add_addDate.resx">
+      <DependentUpon>202104131202595_add_addDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

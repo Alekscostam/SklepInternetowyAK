@@ -94,3 +94,5 @@ C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\Glimp
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.FilmsInitializer.resources
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.csproj.GenerateResource.cache
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.deleteLength.resources
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.PosterName.resources
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.add_addDate.resources

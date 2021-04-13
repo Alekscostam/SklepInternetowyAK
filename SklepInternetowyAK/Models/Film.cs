@@ -22,9 +22,10 @@ namespace SklepInternetowyAK.Models
 
         public decimal Price { get; set; }
        
-    //    public DateTime AddDate { get; set; }
+        public DateTime AddDate { get; set; }
 
         public int CategoryId { get; set; }
+        public string  PosterName{ get; set; }    
 
     //    public  int Length{ get; set; }
 
