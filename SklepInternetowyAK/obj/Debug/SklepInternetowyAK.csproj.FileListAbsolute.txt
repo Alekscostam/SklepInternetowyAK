@@ -88,3 +88,9 @@ C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.csproj.CopyComplete
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.dll
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.pdb
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\Glimpse.Ado.dll
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\Glimpse.Core.dll
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\Glimpse.EF6.dll
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.FilmsInitializer.resources
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.csproj.GenerateResource.cache
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.deleteLength.resources

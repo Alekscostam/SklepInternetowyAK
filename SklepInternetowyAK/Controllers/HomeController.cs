@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SklepInternetowyAK.ViewModels;
+
 
 namespace SklepInternetowyAK.Controllers
 {
@@ -13,7 +15,10 @@ namespace SklepInternetowyAK.Controllers
         FilmsContext db = new FilmsContext();
         public ActionResult Index()
         {
-            return View();
+            var categories = db.Categories.ToList();
+            IndexViewModel ivm = new IndexViewModel();
+            ivm.Categories = categories;
+            return View(ivm);
         }
 
         public ActionResult About()
@@ -46,6 +51,6 @@ namespace SklepInternetowyAK.Controllers
 
             return View(name);
         }
-        
+
     }
 }

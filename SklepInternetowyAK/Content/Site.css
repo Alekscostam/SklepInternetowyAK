@@ -23,8 +23,8 @@ textarea {
     max-width: 280px;
 }
 
-.test {
+table {
+    width: 100%;
+    font-size: 50px;
     text-align: center;
-
-    font-size: 2rem;
 }

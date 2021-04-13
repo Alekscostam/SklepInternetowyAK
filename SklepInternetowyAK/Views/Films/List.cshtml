@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SklepInternetowyAK.Models.Film>  
+@{
+    ViewBag.Title = "List";
+    Layout = null;
+}
+
+<h2>List</h2>
+<table border=1px>
+    @foreach (var film in Model)
+    {
+        <tr>
+            <td><img src="../"></td>
+            <td>@film.Title</td>
+            <td>@film.Price</td>
+            <td>Dodaj do koszyka</td>
+        </tr>
+    }
+<table>
+

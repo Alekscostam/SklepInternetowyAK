@@ -1,4 +1,9 @@
-﻿@using System.Security.Policy
+﻿@model SklepInternetowyAK.ViewModels.IndexViewModel
+
+
+@using System.Security.Policy
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,18 +13,51 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - moja aplikacja platformy ASP.NET</title>
+    <title>@ViewBag.Title - Wypożyczalnia filmów</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .test {
+            text-align: center;
+
+            font-size: 2rem;
+        }
+        #stopka {
+            height: 100px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #3d3a3b;
+            color: white;
+            text-align: center;
+        }
+        .text-footer {
+            padding-top: 2rem;
+            margin: 40px;
+            color: white;
+            font-size: 2rem;
+
+        }
+        .text-footer:hover {
+            text-decoration: none;
+            color: gold;
+        }
+        #background {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: linear-gradient(rgba(192,192,192, 0.5), rgba(255, 255, 255, 0.7)), url(../Content/images/background.jpg);
+            
+        }
+    </style>
 </head>
-<body>
+<body id="background">
 <header>
     <div>
-        <a href="Fantasy.html"></a>
-        <a href="Horror.html"></a>
-        <a href="Komedie.html"></a>
-        <a href="Sensacyjne.html"></a>
-        <a href="Thrillery.html"></a>
+       
+       
     </div>
 </header>
 
@@ -36,27 +74,37 @@
         </div>
         <div class="navbar-collapse collapse text-right" >
             <ul class="nav navbar-nav" >
-                <li class="test">@Html.ActionLink("Fantasy", "Index", "Home")</li>
-                <li class="test">@Html.ActionLink("Horror", "About", "Home")</li>
-                <li class="test">@Html.ActionLink("Komedie", "Contact", "Home")</li>
-                <li class="test">@Html.ActionLink("Sensacyjne", "Contact", "Home")</li>
-                <li class="test">@Html.ActionLink("Thrillery", "Contact", "Home")</li>
+                @* <li class="test">@Html.ActionLink("Fantasy", "Index", "Home")</li> *@
+                @* <li class="test">@Html.ActionLink("Horror", "About", "Home")</li> *@
+                @* <li class="test">@Html.ActionLink("Komedie", "Contact", "Home")</li> *@
+                @* <li class="test">@Html.ActionLink("Sensacyjne", "Contact", "Home")</li> *@
+                @* <li class="test">@Html.ActionLink("Thrillery", "Contact", "Home")</li> *@
+                @foreach (var category in Model.Categories)
+                {
+                   <li class="test"> <a href="@Url.Action("List","Films", 
+                                                  new {categoryName=category.Name})">@category.Name</a></li>
+                }
             </ul>
         </div>
     </div>
 </div>
-<div class="container body-content">
-    @RenderBody()
-    <hr/>
-    <footer>
-        <div id="stopka">
-            <a href="@Url.Action("StaticSite","Home", new { name="Onas"})">O nas</a>
-            <a href="@Url.Action("Contact","Home", new { name="Kontakt"})">Kontakt</a>
-            <a href="@Url.Action("PaymentMethods","Home", new { name="MetodyPlatnosci"})">Metody Platnosci</a>
-            <a href="@Url.Action("Regulations","Home", new { name="Regulamin"})">Regulamin</a>
-        </div>
-    </footer>
+
+<div class="container body-content" >
+    
+        @RenderBody()
+    
+    
 </div>
+<hr/>
+
+<footer id="footer">
+    <div id="stopka" class="container footer-content">
+        <a class="text-footer" href="@Url.Action("StaticSite","Home", new { name="Onas"})">O nas</a>
+        <a  class="text-footer"  href="@Url.Action("Contact","Home", new { name="Kontakt"})">Kontakt</a>
+        <a class="text-footer"   href="@Url.Action("PaymentMethods","Home", new { name="MetodyPlatnosci"})">Metody Platnosci</a>
+        <a  class="text-footer"  href="@Url.Action("Regulations","Home", new { name="Regulamin"})">Regulamin</a>
+    </div>
+</footer>
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
