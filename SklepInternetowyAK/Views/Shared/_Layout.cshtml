@@ -1,4 +1,4 @@
-﻿@model SklepInternetowyAK.ViewModels.IndexViewModel
+﻿
 
 
 @using System.Security.Policy
@@ -54,12 +54,7 @@
     </style>
 </head>
 <body id="background">
-<header>
-    <div>
-       
-       
-    </div>
-</header>
+
 
 
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -73,17 +68,13 @@
             @* @Html.ActionLink("Sklep internetowy", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"}) *@
         </div>
         <div class="navbar-collapse collapse text-right" >
-            <ul class="nav navbar-nav" >
+            <ul class="nav navbar-nav">
                 @* <li class="test">@Html.ActionLink("Fantasy", "Index", "Home")</li> *@
                 @* <li class="test">@Html.ActionLink("Horror", "About", "Home")</li> *@
                 @* <li class="test">@Html.ActionLink("Komedie", "Contact", "Home")</li> *@
                 @* <li class="test">@Html.ActionLink("Sensacyjne", "Contact", "Home")</li> *@
                 @* <li class="test">@Html.ActionLink("Thrillery", "Contact", "Home")</li> *@
-                @foreach (var category in Model.Categories)
-                {
-                   <li class="test"> <a href="@Url.Action("List","Films", 
-                                                  new {categoryName=category.Name})">@category.Name</a></li>
-                }
+                @Html.Action("CategoriesMenu", "Films");
             </ul>
         </div>
     </div>

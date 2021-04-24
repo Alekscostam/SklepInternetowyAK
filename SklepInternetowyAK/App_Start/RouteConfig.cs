@@ -16,8 +16,8 @@ namespace SklepInternetowyAK
 
             routes.MapRoute(
                 name: "FilmsList",
-                url: "stronaFilmy/{categoryName}.html",
-                defaults: new { controller = "Films", action = "List", id = UrlParameter.Optional }
+                url: "stronyFilmy/{categoryName}",
+                defaults: new { controller = "Films", action = "List" }
             );
 
             routes.MapRoute(

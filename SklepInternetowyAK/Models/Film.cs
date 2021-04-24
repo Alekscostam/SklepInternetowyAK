@@ -27,7 +27,7 @@ namespace SklepInternetowyAK.Models
         public int CategoryId { get; set; }
         public string  PosterName{ get; set; }    
 
-    //    public  int Length{ get; set; }
+        public  int Length{ get; set; }
 
         public virtual Category Category { get; set; }
 

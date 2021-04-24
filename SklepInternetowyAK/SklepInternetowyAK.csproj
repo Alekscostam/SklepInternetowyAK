@@ -161,6 +161,10 @@
     <Compile Include="Migrations\202104131202595_add_addDate.designer.cs">
       <DependentUpon>202104131202595_add_addDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104241700223_add length.cs" />
+    <Compile Include="Migrations\202104241700223_add length.designer.cs">
+      <DependentUpon>202104241700223_add length.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Film.cs" />
@@ -219,6 +223,9 @@
     <Content Include="Views\Home\Regulamin.cshtml" />
     <Content Include="Views\Home\MetodyPlatnosci.cshtml" />
     <Content Include="Views\Films\List.cshtml" />
+    <Content Include="Views\Shared\_CategoriesMenu.cshtml" />
+    <Content Include="Views\Films\Details.cshtml" />
+    <Content Include="Views\Films\_FilmsFromCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -248,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104131202595_add_addDate.resx">
       <DependentUpon>202104131202595_add_addDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104241700223_add length.resx">
+      <DependentUpon>202104241700223_add length.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

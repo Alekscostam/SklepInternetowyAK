@@ -15,10 +15,8 @@ namespace SklepInternetowyAK.Controllers
         FilmsContext db = new FilmsContext();
         public ActionResult Index()
         {
-            var categories = db.Categories.ToList();
-            IndexViewModel ivm = new IndexViewModel();
-            ivm.Categories = categories;
-            return View(ivm);
+           
+            return View();
         }
 
         public ActionResult About()

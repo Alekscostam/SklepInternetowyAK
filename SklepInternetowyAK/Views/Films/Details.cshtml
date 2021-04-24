@@ -1,0 +1,33 @@
+﻿@model SklepInternetowyAK.Models.Film
+@using SklepInternetowyAK.Infrastructure
+@{
+    ViewBag.Title = "Szczegóły filmu ";
+}
+
+
+<div id="szczegoly">
+
+    <br><br>
+    <table id="tableSzczegoly">
+    <tr>
+        <td id="filmsFromCategory" style="width: 400px">
+            <h3>@Model.Category.Name</h3>
+            <h4>
+                 @Html.Action("FilmsFromCategory", "Films", new {categoryName = Model.Category.Name})
+            </h4>
+           </td>
+        <td id="obrazek">
+            <img style="max-width: 200px; max-height: 300px" src="@Url.PostersPath(Model.PosterName)">
+        </td>
+        <td>
+            <ul style="font-size: 3rem;">
+                <li>Tytuł: @Model.Title</li>
+                <li>Reżyser: @Model.Director</li>
+                <li>Opis: @Model.Desc</li>
+                <li>Cena: @Model.Price</li>
+                <li>Data dodania: @Model.AddDate</li>
+            </ul>
+        </td>
+    </tr>
+    </table>
+</div>

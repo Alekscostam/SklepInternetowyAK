@@ -1,20 +1,42 @@
-﻿@using SklepInternetowyAK.Infrastructure
-@model IEnumerable<SklepInternetowyAK.Models.Film>  
+﻿@model SklepInternetowyAK.ViewModels.IndexViewModel
+@using SklepInternetowyAK.Infrastructure
 @{
     ViewBag.Title = "List";
-    Layout = null;
+    //Layout = null;
 }
 
-<h2>List</h2>
+<table>
+    <tr><td colspan="3"> NOWOŚCI </td></tr>
+    <tr>
+        @foreach (var film in Model.Top3NewestFilms)
+        {
+            <td><a href="@Url.Action("Details", "Films", new { id = film.FilmId})"><img style="max-width: 200px; max-height: 300px" src="@Url.PostersPath(film.PosterName)" /></a></td>
+        }
+    </tr>
+</table>
+
+<br>
+
+<table>
+    <tr><td colspan="3"> Najdłuższe filmy </td></tr>
+    <tr>
+        @foreach (var film in Model.Top3LongestFilms)
+        {
+            <td><a href="@Url.Action("Details", "Films", new { id = film.FilmId})"><img style="max-width: 200px; max-height: 300px" src="@Url.PostersPath(film.PosterName)" /></a></td>
+        }
+    </tr>
+</table>
+
+<h2>@Model.Category.Name - @Model.Category.Desc</h2>
+
 <table border=1px>
-    @foreach (var film in Model)
+    @foreach (var film in Model.FilmsFromCategory)
     {
         <tr>
-            <td><img src="@Url.PosterPath(film.PosterName)"></td>
+            <td><a href="@Url.Action("Details", "Films", new { id = film.FilmId})"><img style="max-width: 200px; max-height: 300px" src="@Url.PostersPath(film.PosterName)"></a></td>
             <td>@film.Title</td>
             <td>@film.Price</td>
             <td>Dodaj do koszyka</td>
         </tr>
     }
-<table>
-
+</table>
