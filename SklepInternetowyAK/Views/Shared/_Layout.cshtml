@@ -17,6 +17,18 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
+       
+        a {
+            text-decoration: none!important;
+
+            color: black ;
+        }
+        .disabled {
+            pointer-events: none !important;
+            padding: 20px !important;
+            color: black !important;
+            text-shadow: 5px 5px 10px black !important;
+        }
         .test {
             text-align: center;
 
@@ -29,13 +41,13 @@
             bottom: 0;
             width: 100%;
             background-color: #3d3a3b;
-            color: white;
+            color: white !important;
             text-align: center;
         }
         .text-footer {
             padding-top: 2rem;
             margin: 40px;
-            color: white;
+            color: white!important;
             font-size: 2rem;
 
         }

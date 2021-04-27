@@ -6,7 +6,7 @@ using SklepInternetowyAK.Models;
 
 namespace SklepInternetowyAK.ViewModels
 {
-    public class IndexViewModel
+    public class ListViewModel
     {
         public Category Category { get; set; }
 

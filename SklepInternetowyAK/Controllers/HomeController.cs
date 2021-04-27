@@ -15,8 +15,9 @@ namespace SklepInternetowyAK.Controllers
         FilmsContext db = new FilmsContext();
         public ActionResult Index()
         {
-           
-            return View();
+            var longest = db.Films.OrderByDescending(f => f.Length).Take(3);
+
+            return View(longest);
         }
 
         public ActionResult About()
@@ -50,5 +51,9 @@ namespace SklepInternetowyAK.Controllers
             return View(name);
         }
 
+        public ActionResult Test()
+        {
+            return View();
+        }
     }
 }

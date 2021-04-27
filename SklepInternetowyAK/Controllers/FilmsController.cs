@@ -21,12 +21,11 @@ namespace SklepInternetowyAK.Controllers
         {
             var category = db.Categories.Include("Films").Where(c => c.Name.ToLower() == categoryName.ToLower()).Single();
 
-            IndexViewModel model = new IndexViewModel();
+            ListViewModel model = new ListViewModel();
             model.Category = category;
             model.FilmsFromCategory = category.Films.ToList();
             var nowosci = db.Films.OrderByDescending(f => f.AddDate).Take(3);
-            var longest = db.Films.OrderByDescending(f => f.Length).Take(3);
-            model.Top3LongestFilms = longest;
+            
             model.Top3NewestFilms = nowosci;
             return View(model);
         }

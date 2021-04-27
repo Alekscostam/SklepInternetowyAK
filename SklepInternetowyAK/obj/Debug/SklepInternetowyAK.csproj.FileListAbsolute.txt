@@ -97,3 +97,10 @@ C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.PosterName.resources
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.add_addDate.resources
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.Migrations.addlength.resources
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\MvcSiteMapProvider.dll
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\MvcSiteMapProvider.WebActivator.dll
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\WebActivatorEx.dll
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\Microsoft.Web.Administration.dll
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\MvcSiteMapProvider.xml
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\MvcSiteMapProvider.WebActivator.pdb
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\bin\MvcSiteMapProvider.WebActivator.xml

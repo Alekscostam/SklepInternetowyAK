@@ -1,24 +1,19 @@
 ﻿
+
+@model IEnumerable<SklepInternetowyAK.Models.Film>
+@using SklepInternetowyAK.Infrastructure
 @{
     ViewBag.Title = "Index";
+
 }
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-
-
-
-<script src="script.js"></script>
-
-
-
-</body>
-</html>
-
+<br>
+<h2 style="text-align: center">Najdłuższe filmy</h2>
+<br>
+<table style=" text-align: center">
+    <tr>
+        @foreach (var film in Model)
+        {
+            <td><a href="@Url.Action("Details", "Films", new { id = film.FilmId})"><img style="max-width: 200px; max-height: 300px" src="@Url.PostersPath(film.PosterName)" /></a></td>
+        }
+    </tr>
+</table>
