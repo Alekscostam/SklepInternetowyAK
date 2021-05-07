@@ -42,5 +42,23 @@ namespace SklepInternetowyAK.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult RemoveFromCart(int id)
+        {
+            ItemRemoveViewModel model = new ItemRemoveViewModel()
+            {
+                ItemId = id,
+                ItemQuantity = cartManager.RemoveFromCart(id),
+                CartValue = cartManager.GetCartValue(),
+
+                CartQuantity = cartManager.GetCartQuantity()
+            };
+
+            return Json(model);
+        }
+        public int GetCartQuantity()
+        {
+            return cartManager.GetCartQuantity();
+        }
     }
 }

@@ -5,11 +5,14 @@
 
 	
 	<mvcSiteMapNode title="Home" controller="Home" action="Index">
-		<mvcSiteMapNode title="" controller="Films" action="List" dynamicNodeProvider="SklepInternetowyAK.Infrastructure.CategoryDynamicNodeProvider, SklepInternetowyAK">
-			<mvcSiteMapNode title="" controller="Films" action="Details" dynamicNodeProvider="SklepInternetowyAK.Infrastructure.FilmsDynamicNodeProvider, SklepInternetowyAK"/>
-
+		<mvcSiteMapNode title="" controller="Films" action="List" 
+		                dynamicNodeProvider="SklepInternetowyAK.Infrastructure.CategoryDynamicNodeProvider, SklepInternetowyAK">
+			<mvcSiteMapNode title="" controller="Films" action="Details" 
+			                dynamicNodeProvider="SklepInternetowyAK.Infrastructure.FilmsDynamicNodeProvider, SklepInternetowyAK"/>
 
 		</mvcSiteMapNode>
+
+		<mvcSiteMapNode title="Koszyk" controller="Cart" action="Index" />
 
 	</mvcSiteMapNode>
 </mvcSiteMap>

@@ -63,41 +63,25 @@
             background-image: linear-gradient(rgba(192,192,192, 0.5), rgba(255, 255, 255, 0.7)), url(../Content/images/background.jpg);
             
         }
+        header {
+            margin-top: -50px;
+            background: #3d3a3b;
+        }
     </style>
 </head>
 <body id="background">
-
-
-
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            @* @Html.ActionLink("Sklep internetowy", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"}) *@
-        </div>
-        <div class="navbar-collapse collapse text-right" >
-            <ul class="nav navbar-nav">
-                @* <li class="test">@Html.ActionLink("Fantasy", "Index", "Home")</li> *@
-                @* <li class="test">@Html.ActionLink("Horror", "About", "Home")</li> *@
-                @* <li class="test">@Html.ActionLink("Komedie", "Contact", "Home")</li> *@
-                @* <li class="test">@Html.ActionLink("Sensacyjne", "Contact", "Home")</li> *@
-                @* <li class="test">@Html.ActionLink("Thrillery", "Contact", "Home")</li> *@
-                @Html.Action("CategoriesMenu", "Films");
-            </ul>
-        </div>
+<header>
+    @Html.Action("CategoriesMenu", "Films");
+    <div id="koszyk" style="color: aliceblue; font-size: 3rem;">
+        <a  style="color: aliceblue; font-size: 3rem;" href="@Url.Action("Index", "Cart")">&#128717; (<span  id="cartQuantity"> @Html.Action("GetCartQuantity", "Cart") </span>)</a>
     </div>
-</div>
+</header>
 
 <div class="container body-content" >
-    
-        @RenderBody()
-    
-    
+    @RenderBody()
+
 </div>
+
 <hr/>
 
 <footer id="footer">
@@ -108,9 +92,11 @@
         <a  class="text-footer"  href="@Url.Action("Regulations","Home", new { name="Regulamin"})">Regulamin</a>
     </div>
 </footer>
+    
+
+@RenderSection("Scripts",false);
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
-@RenderSection("scripts", required: false)
 </body>
 </html>
