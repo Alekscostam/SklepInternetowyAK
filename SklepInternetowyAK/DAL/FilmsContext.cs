@@ -1,5 +1,7 @@
 ﻿using SklepInternetowyAK.Models;
 using System;
+using Microsoft.AspNet.Identity.EntityFramework;
+using SklepInternetowyAK.Models;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Web;
 
 namespace SklepInternetowyAK.DAL
 {
-    public class FilmsContext : DbContext
+    public class FilmsContext : IdentityDbContext<ApplicationUser>
     {
 
         public DbSet<Film> Films { get; set; }
@@ -22,6 +24,10 @@ namespace SklepInternetowyAK.DAL
         static FilmsContext()
         {
             Database.SetInitializer<FilmsContext>(new FilmsInitializer());
+        }
+        public static FilmsContext Create()
+        {
+            return new FilmsContext();
         }
 
     }

@@ -1,13 +1,8 @@
-﻿
-
-
-@using System.Security.Policy
-
+﻿@using System.Security.Policy
 
 <!DOCTYPE html>
 <html>
 <head>
-
 
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,7 +15,6 @@
        
         a {
             text-decoration: none!important;
-
             color: black ;
         }
         .disabled {
@@ -49,7 +43,6 @@
             margin: 40px;
             color: white!important;
             font-size: 2rem;
-
         }
         .text-footer:hover {
             text-decoration: none;
@@ -61,7 +54,6 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-image: linear-gradient(rgba(192,192,192, 0.5), rgba(255, 255, 255, 0.7)), url(../Content/images/background.jpg);
-            
         }
         header {
             margin-top: -50px;
@@ -72,6 +64,7 @@
 <body id="background">
 <header>
     @Html.Action("CategoriesMenu", "Films");
+    @Html.Partial("_LoginPartial");
     <div id="koszyk" style="color: aliceblue; font-size: 3rem;">
         <a  style="color: aliceblue; font-size: 3rem;" href="@Url.Action("Index", "Cart")">&#128717; (<span  id="cartQuantity"> @Html.Action("GetCartQuantity", "Cart") </span>)</a>
     </div>
