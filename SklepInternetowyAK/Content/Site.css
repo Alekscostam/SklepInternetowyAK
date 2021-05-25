@@ -63,3 +63,7 @@ input {
     width: 150px;
     text-align: center;
 }
+.error {
+    color: deeppink;
+    font-size: 15px;
+}

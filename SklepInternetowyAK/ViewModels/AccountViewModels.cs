@@ -18,6 +18,7 @@ namespace SklepInternetowyAK.ViewModels
             [Display(Name = "Hasło")]
             [Required(ErrorMessage = "Musisz wprowadzić hasło")]
             public string Password { get; set; }
+
             [Display(Name = "Zapamiętaj mnie")]
             public bool RememberMe { get; set; }
         }
