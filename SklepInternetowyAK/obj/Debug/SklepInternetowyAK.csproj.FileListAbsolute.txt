@@ -131,3 +131,4 @@ C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.csproj.CopyComplete
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.dll
 C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.pdb
+C:\Users\Aleksander\source\repos\SklepInternetowyAK\SklepInternetowyAK\obj\Debug\SklepInternetowyAK.csprojAssemblyReference.cache

@@ -1,0 +1,59 @@
+﻿@model SklepInternetowyAK.ViewModels.ManageViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>@ViewBag.StatusMessage</h3>
+
+@using (Html.BeginForm("ChangeUserData", "Manage"))
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Twoje dane</legend>
+        @Html.LabelFor(m => m.UserData.Name, "Imię: ")
+        @Html.TextBoxFor(m => m.UserData.Name)
+        <br>
+        @Html.LabelFor(m => m.UserData.Surname, "Nazwisko: ")
+        @Html.TextBoxFor(m => m.UserData.Surname)
+        <br>
+        @Html.LabelFor(m => m.UserData.Address, "Adres: ")
+        @Html.TextBoxFor(m => m.UserData.Address)
+        <br>
+        @Html.LabelFor(m => m.UserData.City, "Miasto: ")
+        @Html.TextBoxFor(m => m.UserData.City)
+        <br>
+        @Html.LabelFor(m => m.UserData.Email, "Email: ")
+        @Html.TextBoxFor(m => m.UserData.Email)
+        <br>
+        @Html.LabelFor(m => m.UserData.PhoneNumber, "Telefon: ")
+        @Html.TextBoxFor(m => m.UserData.PhoneNumber)
+
+        <input id="Submit1" type="submit" value="Zatwierdź" />
+
+    </fieldset>
+}
+
+@using (Html.BeginForm("ChangePassword", "Manage"))
+{
+    <fieldset>
+        <legend>Zmiana hasła</legend>
+        @Html.LabelFor(m => m.ChangePasswordViewModel.OldPassword, "Stare hasło: ")
+        @Html.PasswordFor(m => m.ChangePasswordViewModel.OldPassword)
+        <br>
+        @Html.LabelFor(m => m.ChangePasswordViewModel.NewPassword, "Nowe hasło: ")
+        @Html.PasswordFor(m => m.ChangePasswordViewModel.NewPassword)
+        <br>
+        @Html.LabelFor(m => m.ChangePasswordViewModel.ConfirmPassword, "Potwierdź hasło: ")
+        @Html.PasswordFor(m => m.ChangePasswordViewModel.ConfirmPassword)
+        <br>
+        <input id="Submit1" type="submit" value="Zatwierdź" />
+    </fieldset>
+}
+
+
+@section Scripts
+{
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+}

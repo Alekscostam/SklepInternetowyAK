@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using SklepInternetowyAK.App_Start;
+using SklepInternetowyAK.Models;
 using SklepInternetowyAK.ViewModels;
 
 namespace SklepInternetowyAK.Controllers
@@ -100,6 +101,27 @@ namespace SklepInternetowyAK.Controllers
 
             return RedirectToAction("Index", new { Message = ManageMessageId.Error });
         }
+
+
+        [HttpPost]
+        public async Task<ActionResult> ChangeUserData(UserData model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index", new { Message = ManageMessageId.Error });
+            }
+
+            var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+            user.UserData = model;
+
+            var result = await UserManager.UpdateAsync(user);
+           if(result.Succeeded)
+               return RedirectToAction("Index", new { Message = ManageMessageId.ChangeUserDataSuccess });
+           else
+               return RedirectToAction("Index", new { Message = ManageMessageId.Error });
+        }
+
+
         private void AddErrors(IdentityResult result)
         {
             foreach (var error in result.Errors)
